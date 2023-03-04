@@ -1,0 +1,41 @@
+header, footer {
+	background-image: url('images/background.jpg');
+	background-color: transparent;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px;
+
+}
+.left-column, .center-column, .right-column {
+	flex: 1;
+	margin: 10px;
+	background-color: transparent;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.left-column {
+	order: 1;
+}
+.center-column {
+	order: 2;
+}
+.right-column {
+	order: 3;
+}
+@media (max-width: 767px) {
+	.wrapper {
+		flex-direction: column;
+	}
+	.left-column, .center-column, .right-column {
+		margin: 10px 0;
+		order: 0;
+	}
+}
